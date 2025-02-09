@@ -4,7 +4,7 @@ A simple landing page for nature tours, built with HTML and Sass.
 
 ## About
 
-This project was created three years ago as a practice exercise to improve my HTML and Sass skills. It features a basic structure for a landing page with a focus on clean design and responsiveness.
+This project was created as a practice exercise to improve my HTML and Sass skills. It features a basic structure for a landing page with a focus on clean design and responsiveness.
 
 ## Features
 
