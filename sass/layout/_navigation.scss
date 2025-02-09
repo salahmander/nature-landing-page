@@ -1,10 +1,13 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .navigation {
   &__checkbox {
     display: none;
   }
 
   &__button {
-    background-color: $color-white;
+    background-color: variables.$color-white;
     height: 7rem;
     width: 7rem;
     position: fixed;
@@ -12,7 +15,7 @@
     right: 6rem;
     border-radius: 50%;
     z-index: 2000;
-    box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+    box-shadow: 0 1rem 3rem rgba(variables.$color-black, 0.1);
     text-align: center;
     cursor: pointer;
   }
@@ -25,8 +28,8 @@
     top: 6.5rem;
     right: 6.5rem;
     background-image: radial-gradient(
-      $color-primary-light,
-      $color-primary-dark
+      variables.$color-primary-light,
+      variables.$color-primary-dark
     );
     z-index: 1000;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -46,7 +49,7 @@
   }
 
   &__list {
-    @include absCenter;
+    @include mixins.absCenter;
     transform: translate(-50%, -50%);
     list-style: none;
     text-align: center;
@@ -64,14 +67,14 @@
       font-size: 3rem;
       font-weight: 300;
       padding: 1rem 2rem;
-      color: $color-white;
+      color: variables.$color-white;
       text-decoration: none;
       text-transform: uppercase;
       background-image: linear-gradient(
         120deg,
         transparent 0%,
         transparent 50%,
-        $color-white 50%
+        variables.$color-white 50%
       );
       background-size: 250%;
       transition: all 0.4s;
@@ -80,7 +83,7 @@
     &:hover,
     &:active {
       background-position: 100%;
-      color: $color-primary;
+      color: variables.$color-primary;
       transform: translateX(2rem);
     }
   }
@@ -105,7 +108,7 @@
     &::after {
       width: 3rem;
       height: 2px;
-      background-color: $color-grey-dark-3;
+      background-color: variables.$color-grey-dark-3;
       display: inline-block;
     }
 

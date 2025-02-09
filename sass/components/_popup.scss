@@ -1,20 +1,23 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 .popup {
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.8);
+  background-color: rgba(variables.$color-black, 0.8);
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3;
 
   &__content {
-    @include absCenter;
+    @include mixins.absCenter;
     width: 75%;
-    background-color: $color-white;
-    box-shadow: 0 2rem 4rem rgba($color-black, 0.2);
+    background-color: variables.$color-white;
+    box-shadow: 0 2rem 4rem rgba(variables.$color-black, 0.2);
     border-radius: 3px;
     display: table;
     overflow: hidden;
@@ -43,11 +46,11 @@
 
     -moz-column-count: 2;
     -moz-column-gap: 4rem; //1em = 14px;
-    -moz-column-rule: 1px solid $color-grey-light-2;
+    -moz-column-rule: 1px solid variables.$color-grey-light-2;
 
     column-count: 2;
     column-gap: 4rem; //1em = 14px;
-    column-rule: 1px solid $color-grey-light-2;
+    column-rule: 1px solid variables.$color-grey-light-2;
 
     -moz-hyphens: auto;
     -ms-hyphens: auto;
@@ -68,7 +71,7 @@
   &__close {
     &:link,
     &:visited {
-      color: $color-grey-dark;
+      color: variables.$color-grey-dark;
       position: absolute;
       top: 2.5rem;
       right: 2.5rem;
@@ -80,7 +83,7 @@
     }
 
     &:hover {
-      color: $color-primary;
+      color: variables.$color-primary;
     }
   }
 }
